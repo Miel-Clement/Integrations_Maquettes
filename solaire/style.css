@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    font-size: 16px;
+}
+
+.topBarColor{
+    background-color: #1B2430;
+
+}
+
+.topBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+}
+
+.topBar img {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.topBar ul {
+    list-style: none;
+    display: flex;
+    text-align: center;
+}
+
+.topBar li {
+    padding-left: 32px;
+}
+
+.topBar li a {
+    color: white;
+    text-decoration: none;
+    align-items: center;
+    font-family: 'Montserrat';
+    font-size: 1.063rem;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+main article[class="beforeAsteroids"]{
+display: flex;
+}
