@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@500&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +16,7 @@
 
 header img[src="img/imagebanner.png"] {
     max-width: 100%;
+    width: 100vw;
 }
 
 .topBar {
@@ -35,48 +39,72 @@ header img[src="img/imagebanner.png"] {
     text-align: center;
 }
 
-.topBar li {
-    padding-left: 32px;
-}
-
 .topBar li a {
     color: white;
     text-decoration: none;
     align-items: center;
     font-family: 'Montserrat';
     font-size: 1.063rem;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    padding: 25px 16px;
+    position: relative;
 }
 
-main article div{
+header a:after{
+    content: "";
+    position: absolute;
+    width: 0;
+    background: #D9D9D9;
+    height: 1px;
+    bottom: 20px;
+    left: 10px;
+}
+
+header a:hover:after{
+    content: "";
+    position: absolute;
+    width: 80%;
+    background: #D9D9D9;
+    height: 1px;
+    bottom: 20px;
+    left: 10px;
+    transition-duration: 0.25s;
+}
+
+
+main section article{
+    display: flex;
     width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
 
-article div img{
-    float: left;
-    padding-right: 127px;
-}
 
-.tellurique, .antiquite{
+
+.tellurique, .antiquite, .gazeuse{
     padding: 12px 16px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     font-family: 'roboto';
     font-size: 1.125rem;
     letter-spacing: 3px;
+    margin-bottom: 20px;
 }
 
 .tellurique {
     background-color: #D6D5A8;
     color: #1B2430;
+    margin-right: 26px;
 }
 
 .antiquite{
     background: #1B2430;
     color: #FFFFFF;
+}
+
+.gazeuse{
+    background: #816797;
+    color: #FFFFFF;
+    margin-right: 26px;
 }
 
 main h2 {
@@ -85,4 +113,159 @@ main h2 {
     font-size: 2.25rem;
     letter-spacing: 3px;
     padding-bottom: 16px;
+}
+
+main p{
+    font-family: 'roboto';
+    font-size: 1.25rem;
+    font-weight: 400;
+    text-align: justify;
+}
+
+article p:first-of-type{
+    display: flex;
+}
+
+section article:first-of-type{
+    margin-top: 51px;
+}
+
+article:nth-of-type(2n-1) img{
+    margin-right: 127px;
+    margin-bottom: 67px ;
+}
+
+article:nth-of-type(2n) img{
+    margin-left: 127px;
+}
+
+section:last-of-type article:last-of-type  img{
+    margin-bottom: 220px;
+}
+
+section:first-of-type article:last-of-type  img{
+    margin-bottom: 96px;
+}
+
+hr {
+    display: none;
+}
+
+main > h2 {
+    margin: 0 auto;
+    width: fit-content;
+    position: relative;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    padding: 0;
+}
+
+main > h2:before {
+    content: "";
+    background-color: #1B2430;
+    position: absolute;
+    width: 392px;
+    height: 1px;
+    left: -420px;
+    top: 50%;
+}
+
+main > h2:after {
+    content: "";
+    background-color: #1B2430;
+    position: absolute;
+    width: 392px;
+    height: 1px;
+    left: calc(100% + 28px);
+    top: 50%;
+}
+
+
+
+footer {
+    background-color: #1B2430;
+}
+
+footer h2{
+    color: #FFFFFF;
+    font-family: 'roboto';
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 1.875rem;
+    margin-top: 46px;
+    margin-bottom: 36px;
+}
+
+.bottomLinks{
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.bottomLinks li {
+    list-style: none;
+    margin-bottom: 17px;
+    text-align: center;
+}
+
+.bottomLinks li a {
+    color: #9F9F9F;
+    text-decoration: none;
+    align-items: center;
+    font-family: 'Montserrat';
+}
+
+footer p{
+    text-align: center;
+    font-family: 'Montserrat';
+    color: #FFFFFF;
+    font-size: 1.063rem;
+}
+
+footer p:first-of-type{
+    margin-top: 58px;
+}
+
+footer p:last-of-type{
+    padding-bottom: 11px;
+}
+
+.bottomLinks nav:nth-last-of-type(2) {
+    position: relative;
+}
+
+.bottomLinks nav:nth-last-of-type(2):after {
+    content: "";
+    position: absolute;
+    height: 210px;
+    width: 1px;
+    background: #C4C4C4;
+    top:  55px;
+    left: -155px;
+}
+
+.bottomLinks nav:nth-last-of-type(2):before {
+    content: "";
+    position: absolute;
+    height: 210px;
+    width: 1px;
+    background: #C4C4C4;
+    top:  55px;
+    right: -155px;
+}
+
+footer p:first-of-type {
+    position: relative;
+}
+
+footer p:first-of-type:before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 1300px;
+    background: #C4C4C4;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
 }
